@@ -1,7 +1,10 @@
-import { hello } from "./fizzbuzz";
+import { getResult } from "./fizzbuzz";
 
 describe("FizzBuzz", () => {
-  it("hello", () => {
-    expect(hello()).toEqual("hello");
+  it("getResult", () => {
+    const result = getResult();
+
+    const expectedResultPattern = /^1 2 Fizz 4 Buzz Fizz 7 8 /;
+    expect(result).toMatch(expectedResultPattern);
   });
 });
